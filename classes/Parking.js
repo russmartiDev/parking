@@ -90,7 +90,7 @@ class Parking {
                         </div>`;
                         break;
                     case this.map[rows][cell].toString().includes('N'):
-                        worldHtml += `<div class="cell parked ${this.map[rows][cell].toString()[this.map[rows][cell].toString().length - 1]}" data-row='${rows}' data-col='${cell}'><img src="/assets/img/${this.map[rows][cell].toString()[this.map[rows][cell].toString().length - 2]}car.png"></div>`;
+                        worldHtml += `<div class="cell parked ${this.map[rows][cell].toString()[this.map[rows][cell].toString().length - 1]}" data-row='${rows}' data-col='${cell}'><img src="./assets/img/${this.map[rows][cell].toString()[this.map[rows][cell].toString().length - 2]}car.png"></div>`;
                         break;
                     case this.map[rows][cell] == "R":
                         worldHtml += `
