@@ -1,0 +1,238 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+html,body {
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+div.cell {
+  background-color: white;
+  flex: 1; /* This ensures each column takes equal width */
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+div.row {
+  display: flex;
+    flex: 1; /* This ensures each row takes equal height */
+}
+div.addForm h1{
+  text-align: center;
+}
+div.addForm button {
+  display: block;
+  width: 100%;
+  margin-block: 1rem;
+  padding-block: .5rem;
+  cursor: pointer;
+  border: 0;
+  border-radius: 1rem;
+  background-color: green;
+  font-weight: bold;
+  color: white;
+}
+
+div.red {
+  background-color: green;
+}
+
+div.entry {
+  background-color: aqua;
+}
+div.entry:hover {
+  background-color: rgb(255, 96, 96);
+  cursor: pointer;
+}
+div.available {
+  background-color: greenyellow;
+}
+div.available svg{
+  position: absolute;
+  width: 2rem;
+  color: green;
+}
+.available svg:hover{
+  color: white;
+  cursor: pointer;
+}
+div.cell.block {
+  background-color: rgb(43, 43, 43);
+}
+div.cell p {
+  font-weight: 900;
+  font-size: 1rem;
+  position: absolute;
+}
+div.step {
+  background-color: blue;
+}
+div.step.up svg{
+  transform: rotate(180deg);
+}
+div.step.left svg{
+  transform: rotate(90deg);
+}
+div.step.right svg{
+  transform: rotate(-90deg);
+}
+.step svg{
+  position: absolute;
+  width: 2rem;
+  color: white;
+}
+
+div.function{
+  position: relative;
+}
+div.function svg{
+  color: white;
+  position: absolute;
+  width: 50%;
+}
+div.function svg:hover{
+  color: blue;
+  cursor: pointer;
+}
+div.parked {
+  background-color: red;
+
+}
+div.parked:hover {
+  cursor: pointer;
+  background-color: rgb(255, 78, 78);
+}
+div.parked img{
+  width: 1rem;
+  height: auto;
+  position: absolute;
+}
+
+div.parked.L img{
+  transform: rotate(-90deg);
+}
+div.parked.R img{
+  transform: rotate(90deg);
+}
+div.parked.D img{
+  transform: rotate(180deg);
+}
+.actionForm{
+  position: absolute;
+  background-color: rgb(224, 224, 224);
+  width: 30rem;
+  height: fit-content;
+  border: 2px solid black;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  border-radius: 1rem;
+  display: none;
+}
+.actionForm div{
+  width: 80%;
+  display: block;
+  margin-inline: auto;
+  text-align: center;
+  margin-block: 1rem;
+  background-color: rgb(255, 145, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 1rem;
+}
+.actionForm div:hover{
+  cursor: pointer;
+  background-color: rgb(255, 187, 0);
+}
+div.parkForm{
+  position: absolute;
+  background-color: rgb(224, 224, 224);
+  width: 30rem;
+  height: fit-content;
+  border: 2px solid black;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  display: none;
+}
+div.parkForm *{
+  margin-block: 1rem;
+}
+div.parkForm div{
+  background-color: rgb(255, 145, 0);
+  padding-block: 1rem;
+  width: 80%;
+  margin-inline: auto;
+  border-radius: 1rem;
+  color: white;
+}
+div.parkForm div:hover{
+  cursor: pointer;
+  background-color: rgb(255, 187, 0);
+}
+
+div.carHistory{
+  position: relative;
+}
+div.carHistory svg{
+  color: white;
+  position: absolute;
+  width: 50%;
+}
+div.carHistory svg:hover{
+  color: blue;
+  cursor: pointer;
+}
+div.carList{
+  position: absolute;
+  background-color: rgb(224, 224, 224);
+  width: 30rem;
+  height: 40rem;
+  border: 2px solid black;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  overflow-y: auto;
+  display: none;
+
+}
+div.carList > div{
+  display: flex;
+  gap: 1rem;
+  margin-block: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+div.carList > div div:nth-child(4){
+  background-color: rgb(255, 145, 0);
+  color: white;
+  padding: .5rem;
+  border-radius: 1rem;
+}
+div.carList > div div:nth-child(4):hover{
+  cursor: pointer;
+  background-color: rgb(255, 187, 0);
+}
